@@ -1,7 +1,15 @@
+import React from 'react';
+import {Link} from 'react-router';
+
 class Repos extends React.Component {
 
   render() {
-    return <div>Repos</div>;
+    return (
+      <ul>
+        <li><Link to="/repos/reactjs/react-router">ReactRouter</Link></li>
+        <li><Link to="/repos/facebook/react">React</Link></li>
+      </ul>
+    );
   }
   
 }
