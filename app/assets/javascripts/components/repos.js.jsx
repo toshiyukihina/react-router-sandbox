@@ -1,14 +1,18 @@
 import React from 'react';
-import {Link} from 'react-router';
+import NavLink from './nav_link';
 
 class Repos extends React.Component {
 
   render() {
     return (
-      <ul>
-        <li><Link to="/repos/reactjs/react-router">ReactRouter</Link></li>
-        <li><Link to="/repos/facebook/react">React</Link></li>
-      </ul>
+      <div>
+        <h2>Repos</h2>
+        <ul>
+          <li><NavLink to="/repos/reactjs/react-router">ReactRouter</NavLink></li>
+          <li><NavLink to="/repos/facebook/react">React</NavLink></li>
+        </ul>
+        {this.props.children}
+      </div>
     );
   }
   

@@ -11,8 +11,9 @@ class Main extends React.Component {
     return (
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <Route path="/repos" component={Repos} />
-          <Route path="/repos/:userName/:repoName" component={Repo}></Route>
+          <Route path="/repos" component={Repos}>
+            <Route path="/repos/:userName/:repoName" component={Repo}></Route>
+          </Route>
           <Route path="/about" component={About} />
         </Route>
       </Router>
