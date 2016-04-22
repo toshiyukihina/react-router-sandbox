@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Route, hashHistory, IndexRoute} from 'react-router';
+import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 import App from './app';
 import Home from './home';
 import Repos from './repos';
@@ -10,7 +10,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={Home} />
           <Route path="/repos" component={Repos}>
